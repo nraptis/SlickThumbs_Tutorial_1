@@ -1,8 +1,8 @@
 //
 //  MyPageViewModel.swift
-//  SlickThumbs
+//  SlickThumbnail
 //
-//  Created by Nick Raptis on 9/20/22.
+//  Created by Nick Raptis on 9/23/22.
 //
 
 import SwiftUI
@@ -13,12 +13,11 @@ class MyPageViewModel: ObservableObject {
         return MyPageViewModel()
     }
     
-    let layout = GridLayout()
     private let model = MyPageModel()
-    
+    let layout = GridLayout()
     
     func numberOfThumbCells() -> Int {
-        return 118
+        return model.totalExpectedCount
     }
     
 }
